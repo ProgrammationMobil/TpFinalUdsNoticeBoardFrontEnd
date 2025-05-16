@@ -1,0 +1,7 @@
+{
+  "name": "UdsNoticeBoard",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
