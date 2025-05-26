@@ -1,6 +1,32 @@
 
+ion-toolbar {
+  background-color: #535f6c;
+}
 
+//ion-segment {
+//  ion-segment-button {
+//    --color: var(--ion-color-medium);
+//    --color-checked: var(--ion-color-primary);
+//    --indicator-color: var(--ion-color-primary);
+//    min-width: auto;
+//  }
+//}
 
+ion-toolbar{
+
+}
+
+ion-avatar {
+  width: 32px;
+  height: 32px;
+}
+
+ion-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 10px;
+}
 
 #container {
   text-align: center;
