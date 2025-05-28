@@ -1,0 +1,130 @@
+
+<ion-content [fullscreen]="true">
+
+
+  <div id="container">
+    <div class=" formulaire " >
+      <div class="background-curve">
+        <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+          <path fill="rgba(245, 247, 250, 0.8)" fill-opacity="1" d="M0,192L48,197.3C96,203,192,213,288,197.3C384,181,480,139,576,138.7C672,139,768,181,864,197.3C960,213,1056,203,1152,192C1248,181,1344,171,1392,165.3L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+        </svg>
+      </div>
+      <form (submit)="onRegister($event)" [formGroup]="form" id="form" class="shadow-2xl">
+        <div class="form-container">
+          <h2 class="form-title">Inscription</h2>
+          <div>
+            <label for="name">Nom</label>
+            <input
+              type="text"
+              id="name"
+              formControlName="name"
+              name="name"
+              required
+            />
+            @if (isInvalid("name")) {
+              @if (form.get("name")?.hasError('required')){
+                <div class="error">
+                  <span>Chanps invalide et obligatoire  !</span>
+                </div>
+              }
+              @if (form.get("name")?.hasError('minlength')) {
+                <div class="error">
+                  <span> Ce champs doit avoir  une longuer minimal de 4! </span>
+                </div>
+              }
+
+            }
+          </div>
+          <div>
+            <label for="username">Nom d'utilisateur</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              formControlName="username"
+              required
+            />
+            @if (isInvalid("username")) {
+              @if (form.get("username")?.hasError('required')){
+                <div class="error">
+                  <span>Chanps invalide et obligatoire  !</span>
+                </div>
+              }
+              @if (form.get("username")?.hasError('minlength')) {
+                <div class="error">
+                  <span> Ce champs doit avoir  une longuer minimal de 4! </span>
+                </div>
+              }
+
+            }
+          </div>
+          <div>
+            <label for="password">Mot de passe</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              formControlName="password"
+              required
+            />
+            @if (isInvalid("password")) {
+              @if (form.get("password")?.hasError('required')){
+                <div class="error">
+                  <span>Chanps invalide et obligatoire  !</span>
+                </div>
+              }
+            }
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              formControlName="email"
+              required
+            />
+            @if (isInvalid("email")) {
+              @if (form.get("email")?.hasError('required')){
+                <div class="error">
+                  <span>Chanps invalide et obligatoire  !</span>
+                </div>
+              }
+              @if (form.get("email")?.hasError('email')) {
+                <div class="error">
+                  <span>  mauvais format d'email </span>
+                </div>
+              }
+            }
+          </div>
+          <div>
+            <label for="phone">Téléphone</label>
+            <input
+              type="text"
+              id="phone"
+              name="phone"
+              formControlName="phone"
+              required
+            />
+            @if (isInvalid("phone")) {
+              @if (form.get("phone")?.hasError('required')){
+                <div class="error">
+                  <span>Chanps invalide et obligatoire  !</span>
+                </div>
+              }
+            }
+          </div>
+          <div class=" relative">
+            <a href="/auth" class="register-link absolute end-5 bottom-16" >Se connecter</a>
+            <button type="submit" [disabled]="!form.valid" id="submit">S'inscrire</button>
+
+          </div>
+
+        </div>
+
+      </form>
+      <p *ngIf="successMessage">{{ successMessage }}</p>
+      <p *ngIf="errorMessage">{{ errorMessage }}</p>
+    </div>
+  </div>
+</ion-content>

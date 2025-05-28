@@ -1,0 +1,41 @@
+
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <form id="postForm" (ngSubmit)="post( $event)" #postForm="ngForm" class="w-full p-4 ">
+      <div class=" w-full flex items-center justify-between p-4 text-end">
+        <button class="cursor-pointer p-2 shadow-2xl rounded-lg text-center flex justify-center items-center  " (click)="closs()">
+          <ion-icon name="close-outline" class="text-4xl opacity-60"></ion-icon>
+        </button>
+        <ion-button [disabled]="!postForm.valid" class="rounded-2xl" type="submit">Publier</ion-button>
+      </div>
+      <textarea name="content" placeholder="Écrivez votre post ici..." required  [(ngModel)]="textArea"></textarea>
+      <img [src]="selectedImage" *ngIf="selectedImage" alt="">
+      <input
+        type="file"
+        hidden
+        accept=".pdf,.doc,.docx"
+        #fileInput
+        (change)="onFileSelected($event)"
+      />
+
+      <div class="absolute  right-0 bottom-20">
+        <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+          <ion-fab-button>
+            <ion-icon name="chevron-up-circle"></ion-icon>
+          </ion-fab-button>
+          <ion-fab-list side="top">
+            <ion-fab-button (click)="openFileSelector(fileInput)">
+              <ion-icon name="document"></ion-icon>
+            </ion-fab-button>
+            <ion-fab-button (click)="selectImage()">
+              <ion-icon name="image-outline"></ion-icon>
+            </ion-fab-button>
+            <ion-fab-button>
+              <ion-icon name="globe"></ion-icon>
+            </ion-fab-button>
+          </ion-fab-list>
+        </ion-fab>
+      </div>
+    </form>
+  </div>
+</ion-content>

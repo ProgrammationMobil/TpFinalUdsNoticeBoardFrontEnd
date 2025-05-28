@@ -1,0 +1,67 @@
+
+
+
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <div class="formulaire  ">
+      <form (submit)="onLogin($event)"  [formGroup]="form" id="form" class="shadow-2xl">
+        <div class="form-container">
+          <h2 class="form-title">Connexion</h2>
+          <div>
+            <label for="username">Nom d'utilisateur</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              formControlName="username"
+              required
+            />
+            @if (isInvalid("username")) {
+              @if (form.get("username")?.hasError('required')){
+                <div class="error">
+                  <span>Chanps invalide et obligatoire  !</span>
+                </div>
+              }
+              @if (form.get("username")?.hasError('minlength')) {
+                <div class="error">
+                  <span> Ce champs doit avoir  une longuer minimal de 4! </span>
+                </div>
+              }
+
+            }
+          </div>
+          <div>
+            <label for="password">Mot de passe</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              formControlName="password"
+              required
+            />
+            @if (isInvalid("password")) {
+              @if (form.get("password")?.hasError('required')){
+                <div class="error">
+                  <span>Chanps invalide et obligatoire  !</span>
+                </div>
+              }
+              @if (form.get("password")?.hasError('minlength')) {
+                <div class="error">
+                  <span> Ce champs doit avoir  une longuer minimal de 4! </span>
+                </div>
+              }
+
+            }
+          </div>
+          <div class="relative">
+            <button type="submit" [disabled]="!form.valid" id="submit"  class="register-link absolute end-5 bottom-16">Se connecter</button>
+            <a href="/auth/register" class="register-link">Créer un compte</a>
+          </div>
+
+          <p *ngIf="successMessage" class="text-success">{{ successMessage }}</p>
+          <p *ngIf="errorMessage" class="text-error">{{ errorMessage }}</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</ion-content>

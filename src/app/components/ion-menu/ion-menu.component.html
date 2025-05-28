@@ -1,0 +1,38 @@
+<ion-menu side="start" contentId="main-content">
+  <!--  <ion-header>-->
+  <!--    <ion-toolbar>-->
+  <!--      <ion-title>Menu Content</ion-title>-->
+  <!--    </ion-toolbar>-->
+  <!--  </ion-header>-->
+  <ion-content class="ion-padding relative w-full"   >
+    <div class="mx-2 mb-4" >
+      <img src="assets/image/image.jpg" alt="logo" class="rounded-full w-20 h-20">
+    </div>
+    <div class="landing-page mb-10">
+      <div class="overlay"></div>
+      <h1 class="title font-bold text-lg">Bienvenue sur Uds Notice Board</h1>
+    </div>
+    <div class="separation w-full"></div>
+    <div class="element mt-10">
+      <button (click)="logout()" class="cursor-pointer">LogOut</button>
+    </div>
+    <div class="element">
+      <button class="cursor-pointer"  (click)="regirect()"> Creé une publication</button>
+    </div>
+    <div class="separation w-full"></div>
+
+    <div class="absolute bottom-24 w-full">
+      <div class="separation w-full"></div>
+      <div class="element">
+        <ion-icon name="settings-outline"></ion-icon>
+        <button class="cursor-pointer"> Preferences</button>
+      </div>
+    </div>
+  </ion-content>
+
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-buttons slot="end">
+    <ion-menu-button></ion-menu-button>
+  </ion-buttons>
+</div>

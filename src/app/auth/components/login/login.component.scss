@@ -1,0 +1,242 @@
+
+/* Import de la police Poppins pour un look moderne */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); /* Fond dégradé */
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div#container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+
+}
+div.formulaire{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+div.formulaire div{
+  display: flex;
+  flex-direction: column;
+
+}
+
+
+form#form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  margin: 2rem;
+  height: auto;
+  width: 100%;
+  max-width: 400px; /* Limite la largeur pour un look plus compact */
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1); /* Fond semi-transparent */
+  backdrop-filter: blur(10px); /* Effet de flou (glassmorphism) */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  animation: fadeInForm 1s ease-out forwards; /* Animation d'apparition */
+}
+
+.form-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideIn 0.8s ease-out 0.3s forwards;
+}
+
+form#form div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideIn 0.8s ease-out forwards;
+}
+
+form#form div label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+form#form div input {
+  all: unset;
+  margin: 0;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #333;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form#form div input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+button#submit {
+  all: unset;
+  background: linear-gradient(90deg, #007bff 0%, #00c4ff 100%); /* Dégradé moderne */
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 15px;
+  width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideIn 0.8s ease-out 0.6s forwards;
+}
+
+button#submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+button#submit:disabled {
+  background: #d1d5db;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+a.register-link {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #007bff;
+  text-decoration: none;
+  opacity: 0.65;
+  transition: opacity 0.3s ease, color 0.3s ease;
+  transform: translateY(20px);
+  animation: slideIn 0.8s ease-out 0.9s forwards;
+}
+
+a.register-link:hover {
+  opacity: 1;
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+p.text-success {
+  color: #28a745;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+p.text-error {
+  color: #dc3545;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+/* Animations */
+@keyframes fadeInForm {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  form#form {
+    padding: 20px 15px;
+    margin: 1rem;
+  }
+
+  .form-title {
+    font-size: 1.5rem;
+  }
+
+  form#form div input {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  button#submit {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+}
+.error {
+  font-size: 0.75rem;
+  color: #dc3545;
+  padding-left: 5px;
+  animation: fadeInError 0.3s ease-out; /* Animation pour l'apparition */
+}
+
+@keyframes fadeInError {
+  0% {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Styles pour les champs invalides, touchés ou modifiés */
+input.ng-invalid.ng-touched,
+input.ng-invalid.ng-dirty {
+  border-color: #dc3545; /* Rouge pour indiquer une erreur */
+  box-shadow: 0 0 0 2px rgba(220, 53, 69, 0.2); /* Ombre légère pour accentuer */
+}
+
+/* Styles pour les champs valides, touchés ou modifiés (optionnel) */
+input.ng-valid.ng-touched,
+input.ng-valid.ng-dirty {
+  border-color: #28a745; /* Vert pour indiquer une validation */
+  box-shadow: 0 0 0 2px rgba(40, 167, 69, 0.2); /* Ombre légère */
+}

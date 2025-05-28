@@ -1,0 +1,16 @@
+
+
+
+/* Styles pour le textarea afin qu'il occupe tout l'écran */
+textarea {
+  all: unset;
+  width: 100%; /* Largeur complète de la fenêtre */
+  height: 60vh; /* Hauteur complète de la fenêtre */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Inclut les bordures et paddings dans la taille totale */
+  border: none; /* Supprime la bordure par défaut */
+  resize: none; /* Empêche le redimensionnement par l'utilisateur */
+  font-size: 16px; /* Ajuste la taille de la police pour une meilleure lisibilité */
+  outline: none; /* Supprime le contour lors du focus pour un look épuré */
+}
