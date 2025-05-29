@@ -1,0 +1,33 @@
+<div class="h-auto w-full bg-background"  >
+  <div class="header flex justify-between p-5">
+    <div class="flex ">
+      <h4 class="font-bold"> {{post.author}}</h4>
+    </div>
+    <div><ion-icon name="ellipsis-vertical-outline"></ion-icon></div>
+  </div>
+
+  <div class="text px-5">
+    <h3 class="text-lg font-extrabold pb-3">{{post.title}}</h3>
+    <span class="text-sm font-bold"> {{post.content}}</span>
+  </div>
+  @if (post.image){
+    <div class="image w-full">
+      <img [src]="post.image" [alt]="post.title" class="w-full">
+    </div>
+    <div class="like">
+      <ion-icon name="heart-circle-outline"></ion-icon>
+      <span>{{post.like}}</span>
+    </div>
+  }
+  <div class="separation"></div>
+  <div class="resend">
+    <button>
+      <ion-icon name="heart-circle-outline"></ion-icon>
+      <ion-label>J'aime</ion-label>
+    </button>
+    <button>
+      <ion-icon name="git-compare-outline"></ion-icon>
+      <ion-label>Republier</ion-label>
+    </button>
+  </div>
+</div>

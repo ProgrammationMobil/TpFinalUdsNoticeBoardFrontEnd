@@ -4,8 +4,10 @@
     <div>
       <app-header></app-header>
     </div>
-    <div class="landing-page">
-
+    <div class="landing-page h-full">
+      <div class="content flex flex-col gap-5" >
+        <app-post *ngFor="let post of Posts()" [post]="post"></app-post>
+      </div>
     </div>
   </div>
 </ion-content>

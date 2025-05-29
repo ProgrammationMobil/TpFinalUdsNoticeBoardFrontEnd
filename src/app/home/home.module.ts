@@ -6,17 +6,19 @@ import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
 import {HeaderComponent} from "../components/header/header.component";
+import {PostComponent} from "../components/post/post.component";
 
 
 
 @NgModule({
-    imports: [
-        CommonModule,
-        FormsModule,
-        IonicModule,
-        HomePageRoutingModule,
-        HeaderComponent,
-    ],
+  imports: [
+    CommonModule,
+    FormsModule,
+    IonicModule,
+    HomePageRoutingModule,
+    HeaderComponent,
+    PostComponent,
+  ],
   declarations: [HomePage]
 })
 export class HomePageModule {}
