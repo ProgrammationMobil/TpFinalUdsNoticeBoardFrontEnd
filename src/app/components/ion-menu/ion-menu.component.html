@@ -11,7 +11,9 @@
     <div class="landing-page mb-10">
       <div class="overlay"></div>
       <h1 class="title font-bold text-lg">Bienvenue sur Uds Notice Board</h1>
+      <div class=" text-xl font-bold" >{{username}}</div>
     </div>
+
     <div class="separation w-full"></div>
     <div class="element mt-10">
       <button (click)="logout()" class="cursor-pointer">LogOut</button>
@@ -32,7 +34,7 @@
 
 </ion-menu>
 <div class="ion-page" id="main-content">
-  <ion-buttons slot="end">
+  <ion-buttons slot="end" class="p-2">
     <ion-menu-button></ion-menu-button>
   </ion-buttons>
 </div>

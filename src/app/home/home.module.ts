@@ -7,6 +7,8 @@ import { HomePage } from './home.page';
 import { HomePageRoutingModule } from './home-routing.module';
 import {HeaderComponent} from "../components/header/header.component";
 import {PostComponent} from "../components/post/post.component";
+import {ActionSheetComponent} from "../components/action-sheet/action-sheet.component";
+import {HideOnScrollDirective} from "../directive/hide-on-scroll.directive";
 
 
 
@@ -18,6 +20,8 @@ import {PostComponent} from "../components/post/post.component";
     HomePageRoutingModule,
     HeaderComponent,
     PostComponent,
+    ActionSheetComponent,
+    HideOnScrollDirective,
   ],
   declarations: [HomePage]
 })

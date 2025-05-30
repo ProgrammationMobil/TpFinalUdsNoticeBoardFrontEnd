@@ -33,6 +33,12 @@ export class AuthService {
       })
     );
   }
+  //Recuperation des informations utilisateur
+  getCurrentUser(): any {
+    const userData = localStorage.getItem('user');
+    return userData ? JSON.parse(userData) : null;
+  }
+
 
   // Récupérer le token
   getToken(): string | null {

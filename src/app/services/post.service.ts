@@ -7,6 +7,14 @@ import {Observable,of} from "rxjs";
 export class PostService {
   Posts:PostModel[] =[
     {
+      "id": 3,
+      "title": "Why Space Exploration Inspires Us All",
+      "content": "Space exploration has always captured the human imagination, pushing the boundaries of what we believe is possible. From the Apollo missions to the recent Mars rover landings, each milestone reminds us of our capacity for innovation and discovery. The cosmos is vast, with billions of galaxies, stars, and potentially habitable exoplanets waiting to be explored. Modern missions, like those targeting Jupiter’s moons or asteroid mining, aim to uncover clues about the origins of life and the resources available beyond Earth. But it’s not just about science—space exploration unites us, sparking wonder and curiosity across generations. Programs like the International Space Station demonstrate global collaboration, while private companies are making space more accessible than ever. Yet, challenges remain: the high costs, technical risks, and ethical questions about colonizing other planets. As we look to the stars, we must balance ambition with responsibility. What excites you most about space? Is it the possibility of life elsewhere or the technological leaps we’re making? Let’s dream big together! https://google.com",
+      "author": "StarGazrX",
+      "image": "assets/image/image2.jpg",
+      "like": 392
+    },
+    {
       "id": 1,
       "title": "Exploring the Future of AI in Everyday Life",
       "content": "Artificial Intelligence is rapidly transforming the way we interact with technology and the world around us. From smart assistants that manage our schedules to autonomous vehicles navigating busy streets, AI is becoming an integral part of daily life. Imagine a world where your refrigerator can detect low stock and automatically order groceries, or where medical diagnostics are performed with precision by AI systems trained on vast datasets. The potential is enormous, but so are the challenges. Ethical considerations, such as ensuring fairness in AI decision-making, preventing bias in algorithms, and safeguarding user privacy, are critical topics that need addressing. Furthermore, the integration of AI into industries like education, healthcare, and entertainment promises to enhance efficiency but also raises questions about job displacement and the need for new skill sets. As we move forward, collaboration between technologists, policymakers, and the public will be essential to harness AI’s benefits while mitigating its risks. This post is just the beginning of a conversation—let’s discuss how AI can shape a better future for all.",
@@ -37,7 +45,16 @@ export class PostService {
       "author": "WanderlustCoder",
       "image": "assets/image/image3.jpg",
       "like": 301
-    }
+    },
+
+    {
+      "id": 1,
+      "title": "Exploring the Future of AI in Everyday Life",
+      "content": "Artificial Intelligence is rapidly transforming the way we interact with technology and the world around us. From smart assistants that manage our schedules to autonomous vehicles navigating busy streets, AI is becoming an integral part of daily life. Imagine a world where your refrigerator can detect low stock and automatically order groceries, or where medical diagnostics are performed with precision by AI systems trained on vast datasets. The potential is enormous, but so are the challenges. Ethical considerations, such as ensuring fairness in AI decision-making, preventing bias in algorithms, and safeguarding user privacy, are critical topics that need addressing. Furthermore, the integration of AI into industries like education, healthcare, and entertainment promises to enhance efficiency but also raises questions about job displacement and the need for new skill sets. As we move forward, collaboration between technologists, policymakers, and the public will be essential to harness AI’s benefits while mitigating its risks. This post is just the beginning of a conversation—let’s discuss how AI can shape a better future for all.",
+      "author": "TechEnthusiast42",
+      "image": "assets/image/image.jpg",
+      "like": 245
+    },
   ]
   constructor() { }
 

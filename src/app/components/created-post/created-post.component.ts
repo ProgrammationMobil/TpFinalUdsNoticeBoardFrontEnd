@@ -1,9 +1,10 @@
 import {Component, inject} from '@angular/core';
 import {IonicModule} from "@ionic/angular";
-import {FormsModule} from "@angular/forms";
+import {FormsModule,FormGroup, ReactiveFormsModule, FormBuilder} from "@angular/forms";
 import {Camera, CameraResultType, CameraSource} from "@capacitor/camera";
 import {CommonModule} from "@angular/common";
 import {Router} from "@angular/router";
+import {PostModel} from "../../models/post.model";
 @Component({
   selector: 'app-created-post',
   templateUrl: './created-post.component.html',

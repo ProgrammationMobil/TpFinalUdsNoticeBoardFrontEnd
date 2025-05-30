@@ -1,0 +1,23 @@
+div.image{
+  img{
+    object-fit: cover;
+  }
+}
+div.separation{
+  width: 100%;
+  height: 2px;
+  background-color: #c3c3c3;
+}
+ion-icon.like{
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+ion-icon.like.clicked {
+  background-color: #ff4081;
+  transform: scale(1.2);
+  transition: all 0.2s ease;
+}

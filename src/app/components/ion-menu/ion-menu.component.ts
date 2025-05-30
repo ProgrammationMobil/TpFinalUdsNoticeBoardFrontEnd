@@ -10,7 +10,8 @@ import {Router, RouterLink} from "@angular/router";
     IonicModule,
   ]
 })
-export class IonMenuComponent {
+export class IonMenuComponent  implements OnInit {
+  username! : String;
   private authService = inject(AuthService)
   private router = inject(Router)
   constructor() { }
@@ -21,5 +22,13 @@ export class IonMenuComponent {
 
   regirect() {
     this.router.navigateByUrl('/post').then(r => true);
+  }
+
+  ngOnInit() {
+    const user = this.authService.getCurrentUser();
+    if (user) {
+      this.username = user.username;
+    } else {
+    }
   }
 }
