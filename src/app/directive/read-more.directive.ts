@@ -7,7 +7,7 @@ import {  Directive, ElementRef, Input, Renderer2, OnInit,  SimpleChanges,
 })
 export class ReadMoreDirective implements OnChanges {
 
-  @Input() text: string = '';
+  @Input() text: String | undefined = '';
   @Input() limit!: number ;
 
 

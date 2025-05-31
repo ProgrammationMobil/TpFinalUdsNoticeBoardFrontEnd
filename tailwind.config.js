@@ -14,6 +14,7 @@ module.exports = {
     fontFamily: {
       sans: ['Inter', 'sans-serif'],
       Montserrat: ['Montserrat', 'sans-serif'],
+      Roboto: ['Roboto', 'sans-serif'],
     },
     extend: {},
   },

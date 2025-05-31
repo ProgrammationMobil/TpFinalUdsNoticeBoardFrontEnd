@@ -9,16 +9,24 @@ import {ActionSheetComponent} from "../action-sheet/action-sheet.component";
   selector: 'app-post',
   templateUrl: './post.component.html',
   styleUrls: ['./post.component.scss'],
-  imports: [IonicModule, ShortingPipe, CommonModule, ReadMoreDirective, ActionSheetComponent],
+  imports: [IonicModule, CommonModule, ReadMoreDirective, ],
 })
 export class PostComponent   {
-  liked!:boolean;
+  liked:boolean = false ;
   @Input()post!:PostModel;
-
   constructor() { }
 
   toggleLike() {
-    this.liked = !this.liked;
+
+    if (!this.liked) {
+      this.post.like++;
+      this.liked = true;
+    }else {
+      this.post.like--;
+      this.liked = false;
+    }
   }
 
+
+  protected readonly menubar = menubar;
 }

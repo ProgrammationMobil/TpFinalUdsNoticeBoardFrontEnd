@@ -1,11 +1,15 @@
 
 ion-menu::part(backdrop) {
-  background-color: rgba(39, 41, 44, 0.09);
+  background-color: rgba(0, 0, 0, 0.4); /* foncé = plus bloquant */
+}
+.menu-opened #main-content {
+  pointer-events: none;
+  filter: blur(1px);
 }
 ion-menu{
   --background: #f1f1f1;
   --ion-background-color: #f1f1f1;
-
+  height: 100%;
 }
 ion-menu::part(container) {
   border-radius: 0 10px 10px 0;

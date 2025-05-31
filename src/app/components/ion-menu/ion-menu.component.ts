@@ -14,7 +14,18 @@ export class IonMenuComponent  implements OnInit {
   username! : String;
   private authService = inject(AuthService)
   private router = inject(Router)
-  constructor() { }
+
+ constructor() {}
+  ngOnInit() {
+    const user = this.authService.getCurrentUser();
+    if (user) {
+      this.username = user.username;
+    } else {
+    }
+  }
+
+
+
   logout() {
     this.authService.logout();
     this.router.navigateByUrl('/auth/login').then(r => true);
@@ -22,13 +33,5 @@ export class IonMenuComponent  implements OnInit {
 
   regirect() {
     this.router.navigateByUrl('/post').then(r => true);
-  }
-
-  ngOnInit() {
-    const user = this.authService.getCurrentUser();
-    if (user) {
-      this.username = user.username;
-    } else {
-    }
   }
 }

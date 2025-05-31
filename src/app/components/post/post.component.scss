@@ -15,9 +15,10 @@ ion-icon.like{
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  font-size: 18px;
 }
 ion-icon.like.clicked {
   background-color: #ff4081;
-  transform: scale(1.2);
+  transform: scale(1.5);
   transition: all 0.2s ease;
 }

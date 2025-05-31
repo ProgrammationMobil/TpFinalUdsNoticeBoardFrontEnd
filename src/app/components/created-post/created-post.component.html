@@ -3,7 +3,7 @@
   <div id="container">
     <form id="postForm" (ngSubmit)="post( $event)" #postForm="ngForm" class="w-full p-4 ">
       <div class=" w-full flex items-center justify-between p-4 text-end">
-        <button class="cursor-pointer p-2 shadow-2xl rounded-lg text-center flex justify-center items-center  " (click)="closs()">
+        <button class="cursor-pointer p-2 shadow-2xl rounded-lg text-center flex justify-center items-center  " (click)="closs()" type="reset">
           <ion-icon name="close-outline" class="text-4xl opacity-60"></ion-icon>
         </button>
         <ion-button [disabled]="!postForm.valid" class="rounded-2xl" type="submit">Publier</ion-button>
